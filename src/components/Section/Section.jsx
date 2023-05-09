@@ -1,7 +1,13 @@
-export const Section = ({title}) {
+import React from 'react'
+
+
+export const Section = ({ title, children }) => {
    return (
       <section>
-         {title && <h2 className={css.xxxx}>{title}</h2>}
+         {title && <h2 >{title}</h2>}
+         {children}
       </section>
    )
 }
+
+// className={css.xxxx}
