@@ -4,6 +4,8 @@ import { Statistics } from 'components/Statistics/Statistics';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from "components/Section/Section";
 import { Notification } from 'components/NotificationMessage/NotificationMessage';
+// import { css } from 'components/Section/Section.module.css';
+
 
 export class App extends Component {
    state = {
@@ -37,7 +39,7 @@ export class App extends Component {
       return (
          <>
          <Section title={'Please leave feedback'}>
-            <FeedbackOptions onLeaveFeedback={this.handleFeedbButton}/>
+            <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.handleFeedbButton}/>
             </Section >
             {this.countTotalFeedback(this.state) ?
                (<Section title={'Statistic'}>

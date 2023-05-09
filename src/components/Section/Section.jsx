@@ -1,10 +1,11 @@
 import React from 'react'
+import css from 'components/Section/Section.module.css';
 
 
 export const Section = ({ title, children }) => {
    return (
       <section>
-         {title && <h2 >{title}</h2>}
+         {title && <h2 className={css.sectionFeedB}>{title}</h2>}
          {children}
       </section>
    )
